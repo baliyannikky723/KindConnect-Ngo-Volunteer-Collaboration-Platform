@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Sign-Up Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #9a9bb4;
+            --secondary-color: #545460;
+            --text-color: #ffffff;
+            --background-color: rgba(200, 170, 50, 0.95);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--background-color), #34495e);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50px;
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group textarea {
+            border-radius: 20px;
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input::placeholder,
+        .form-group select::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus + i,
+        .form-group select:focus + i,
+        .form-group textarea:focus + i {
+            color: var(--primary-color);
+        }
+
+        .submit-button {
+            background: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50px;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .signin-toggle {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .signin-toggle a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .signin-toggle a:hover {
+            color: var(--secondary-color);
+        }
+
+        .signin-form {
+            display: none;
+            margin-top: 2rem;
+        }
+
+        #signin-checkbox:checked ~ .signin-form {
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            .form-title {
+                font-size: 1.5rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea,
+            .submit-button {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="form-title">Volunteer Sign-Up</h1>
+        <form class="form" id="signup-form">
+            <div class="form-group">
+                <input type="text" placeholder="Full Name" required>
+                <i class="ri-user-fill"></i>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+                <i class="ri-mail-fill"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" required>
+                <i class="ri-lock-password-line"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Confirm Password" required>
+                <i class="ri-lock-password-line"></i>
+            </div>
+            <div class="form-group">
+                <select required>
+                    <option value="" disabled selected>Select your skills</option>
+                    <option value="teaching">Teaching</option>
+                    <option value="medical">Medical</option>
+                    <option value="technical">Technical</option>
+                    <option value="administrative">Administrative</option>
+                    <option value="other">Other</option>
+                </select>
+                <i class="ri-tools-fill"></i>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Tell us about your interests and experience" required></textarea>
+                <i class="ri-file-text-line"></i>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Phone Number">
+                <i class="ri-phone-fill"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Location">
+                <i class="ri-map-pin-fill"></i>
+            </div>
+            <div class="form-group">
+                <select required>
+                    <option value="" disabled selected>Availability</option>
+                    <option value="weekdays">Weekdays</option>
+                    <option value="weekends">Weekends</option>
+                    <option value="evenings">Evenings</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+                <i class="ri-calendar-fill"></i>
+            </div>
+            <button type="submit" class="submit-button">Sign Up</button>
+        </form>
+
+        <div class="signin-toggle">
+            <input type="checkbox" id="signin-checkbox" hidden>
+            <label for="signin-checkbox">Already have an account? <a href="login.html">Sign In</a></label>
+        </div>
+
+        <form class="form signin-form" id="signin-form">
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+                <i class="ri-mail-fill"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" required>
+                <i class="ri-lock-password-line"></i>
+            </div>
+            <button type="submit" class="submit-button">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

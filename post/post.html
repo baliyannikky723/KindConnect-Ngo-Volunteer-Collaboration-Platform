@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Feed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: rgba(200, 170, 50, 0.95);
+            --secondary-color: rgba(200, 170, 50, 0.95);
+            --background-color: #feffff;
+            --text-color: #060606;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .post {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .post-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .post-header h2 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .post-description {
+            margin-bottom: 15px;
+        }
+
+        .post-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .post-link:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .post-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>NGO Social Feed</h1>
+        </header>
+        <main class="feed">
+            <article class="post">
+                <header class="post-header">
+                    <img src="ngo3logo.jpeg" alt="Green Earth Logo">
+                    <h2>Green Yatra</h2>
+                </header>
+                <img src="ngo3.jpg" alt="Reforestation project" class="post-image">
+                <div class="post-content">
+                    <p class="post-description">Green Yatra is a leading environmental NGO in India working towards achieving the Sustainable Development Goals (SDGs) through tree plantation, urban biodiversity conservation, water bodies restoration, sustainable solutions, and environmental research and awareness. We are a rare blend of resources equipped with traditional wisdom and modern, innovative technologies to help corporate achieving their NET Zero Goal. Our latest reforestation project has successfully planted 10,000 trees in the Amazon rainforest. Together, we're making a difference!</p>
+                    <a href="https://greenyatra.org/" class="post-link">Learn more about our projects</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <img src="ngo2logo.jpg" alt="Education for All Logo">
+                    <h2>Smile Foundation-Education for All</h2>
+                </header>
+                <img src="ngo2.jpg" alt="New school opening" class="post-image">
+                <div class="post-content">
+                    <p class="post-description">If we need to address healthcare, poverty, population control, unemployment and human rights, there's no better way to start than providing education to children in need. Education not only empowers children to have a secure future but also helps them grow up as responsible national and global citizens. The Right to Education (RTE) Act which came into force in 2010 made education free and compulsory for all children in the age group of 6-14 years. But even a decade later, the learning curve has not been steady for many children in the country. We're excited to announce the opening of our new school in rural India, providing education to 500 children. Your support made this possible!</p>
+                    <a href="https://www.smilefoundationindia.org/education/" class="post-link">See how you can contribute</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <img src="ngo1logo.jpg" alt="Clean Water Initiative Logo">
+                    <h2>Clean Water Initiative</h2>
+                </header>
+                <img src="ngo1.jpg" alt="Water purification system" class="post-image">
+                <div class="post-content">
+                    <p class="post-description">Water is a global non-profit organization on a mission to end the water crisis by bringing clean and safe water and sanitation programs to people in need. Our new water purification system is now operational in 5 villages, providing clean drinking water to over 10,000 people daily.</p>
+                    <a href="https://www.mmpc.in/our-work/drinking-water-sanitation/sanitation/" class="post-link">Explore our water projects</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <img src="vol2logo.jpg" alt="Volunteer Sarah">
+                    <h2>Sarah, Volunteer</h2>
+                </header>
+                <img src="vol2.jpg" alt="Volunteer teaching" class="post-image">
+                <div class="post-content">
+                    <p class="post-description">Today, I had the privilege of leading a successful beach cleanup with a dedicated team of 50 volunteers. Together, we collected over 500 pounds of trash and plastics, making a tangible impact on preserving our oceans. It’s inspiring to see how collective efforts, no matter how small they may seem, can contribute to protecting our planet for future generations.</p>
+                    <a href="#" class="post-link">Read Sarah's full story</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <img src="ngo5logo.png" alt="Wildlife Conservation Society Logo">
+                    <h2>Miracle Foundation India</h2>
+                </header>
+                <img src="nho5.jpg" alt="Elephant sanctuary" class="post-image">
+                <div class="post-content">
+                    <p class="post-description">Miracle Foundation India is part of a global network of non-profit organizations leading the worldwide movement to end the need for Child Care Institutions in our lifetime.​ Our work keeps children at the center of our programmes, to ensure they live safe, meaningful and productive lives, all through to their adulthood.</p>
+                    <a href="https://miraclefoundationindia.in/" class="post-link">Support our programs</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <img src="ngo4logo.jpg" alt="Hunger Relief Network Logo">
+                    <h2>Hunger Relief Network</h2>
+                </header>
+                <img src="ngo4.jpg" alt="Food distribution" class="post-image">
+                <div class="post-content">
+                    <p class="post-description">No Hungry Child program is focused towards distributing Nutritious food to poor needy children along with Education support. We have a daily nutritious meal coverage of more than 21,000 under-privileged, Orphans & Physical challenged children. Our daily food distribution regimen is smooth efficient & dependable-365 days a year. Thanks to our amazing volunteers and donors, we've distributed over 100,000 meals to families in need this month. Together, we're fighting hunger one meal at a time.</p>
+                    <a href="https://www.nohungrychild.in/Home.aspx" class="post-link">Join our fight against hunger</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <img src="vol1logo.jpg" alt="Volunteer John">
+                    <h2>Vivek, Volunteer</h2>
+                </header>
+                <img src="vol1.jpeg" alt="Beach cleanup" class="post-image">
+                <div class="post-content">
+                    <p class="post-description">I just completed my first month volunteering as an English teacher in Cambodia, and it has been an incredible experience. This journey has given me the opportunity to make a difference in the lives of others while also learning so much from the community and culture around me. I’m deeply grateful for the chance to contribute in this meaningful way and look forward to the impact we can create together in the coming months.</p>
+                    <a href="#" class="post-link">Happy to be part of this!</a>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
