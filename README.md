@@ -1,8 +1,14 @@
-# KindConnect-NGO & Volunteer Collaboration Platform
+# KindConnect
 
-This project aims at being a complete, end-to-end solution for the functioning of a Dehradun based NGO, Badlaav Foundation, which is a not-for-profit organization founded in order to improve the lives and livelihoods of people from the vulnerable, marginalized and under-developed sections of the society. This single-page landing website was created to increase the awareness of the NGO (Badlaav Founadation) and reach as much people as possible. It was essential to have global presence that is to have online presence.
+(NGO & Volunteer Collaboration Platform)
 
-Link to the Website - [KindConnect](https://anshumansrivastava108.github.io/BadlaavFoundation-NGO-Website/)
+KindConnect is an innovative, end-to-end platform dedicated to empowering NGOs and volunteers to create meaningful connections and drive impactful change. This project aims to provide a comprehensive solution for NGOs working tirelessly to uplift vulnerable, marginalized, and underprivileged sections of society.
+
+The platform serves as a bridge to amplify the efforts of NGOs by enhancing their reach and visibility, enabling them to connect with volunteers and donors across the globe. Designed as a single-page landing website, KindConnect fosters awareness about social causes, promotes volunteer opportunities, and encourages global participation.
+
+With the mission to ensure every NGO has the online presence it needs to thrive, KindConnect combines modern technology with a deep sense of purpose, creating a space where compassion meets action.
+
+Link to the Website - [KindConnect](https://baliyannikky723.github.io/KindConnect-Ngo-Volunteer-Collaboration-Platform/)
 
 ### Technologies Used:
 
